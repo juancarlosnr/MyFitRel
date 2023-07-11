@@ -45,10 +45,7 @@ import com.example.myfitrel.ui.theme.textColor
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ExerciseCard(
-    description: String,
-    descriptionFontSize: TextUnit = MaterialTheme.typography.bodySmall.fontSize,
-    descriptionFontWeight: FontWeight = FontWeight.Normal,
-    descriptionMaxLines: Int = 4
+    description: String
 ) {
     var expandedState by remember { mutableStateOf(false) }
     val rotationState by animateFloatAsState(
@@ -126,10 +123,11 @@ fun ExerciseCard(
             if (expandedState) {
                 Text(
                     text = description,
-                    fontSize = descriptionFontSize,
-                    fontWeight = descriptionFontWeight,
-                    maxLines = descriptionMaxLines,
-                    overflow = TextOverflow.Ellipsis
+                    color = Color.White,
+                    fontSize = 12.sp,
+                    fontWeight = FontWeight.Normal,
+                    maxLines = 4,
+                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 16.dp)
                 )
             }
         }

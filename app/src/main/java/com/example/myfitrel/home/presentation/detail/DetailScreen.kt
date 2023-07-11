@@ -25,7 +25,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.myfitrel.R
+import com.example.myfitrel.home.domain.models.Routine
 import com.example.myfitrel.home.presentation.detail.composables.ButtonCreateAccount
 import com.example.myfitrel.home.presentation.detail.composables.ExerciseCard
 import com.example.myfitrel.ui.theme.backgroundButton
@@ -33,7 +35,7 @@ import com.example.myfitrel.ui.theme.backgroundDetail
 import com.example.myfitrel.ui.theme.textColor
 
 @Composable
-fun DetailScreen() {
+fun DetailScreen(navController: NavHostController, routineId:Int) {
     Box(
         Modifier
             .fillMaxSize()
@@ -168,5 +170,5 @@ fun DetailScreen() {
 @Preview
 @Composable
 fun DetailScreenPreview() {
-    DetailScreen()
+    //DetailScreen()
 }
